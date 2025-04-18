@@ -5,6 +5,6 @@ import org.junit.jupiter.api.Test;
 class FooTest {
     @Test
     void testBar() {
-        assertEquals(Foo.bar(), "Foo{}");
+        assertEquals("Foo{}", Foo.bar());
     }
 }
