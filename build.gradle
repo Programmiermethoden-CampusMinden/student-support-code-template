@@ -22,12 +22,10 @@ dependencies {
 }
 
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
-    }
-    sourceCompatibility = JavaVersion.VERSION_21
-}
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)  // use current Long-Term Support (LTS) release
+java.sourceCompatibility = JavaVersion.VERSION_25
+java.targetCompatibility = JavaVersion.VERSION_25
+
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
 sourceSets.main.java.srcDirs = ['src/main/java/', 'solution/main/java/']
